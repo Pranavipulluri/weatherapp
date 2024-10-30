@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">weather app</string>
+    <string-array name="cities_array">
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
+        <item>Hyderabad</item> <!-- Added Hyderabad -->
+        <!-- Add more cities as needed -->
+    </string-array>
+
+</resources>

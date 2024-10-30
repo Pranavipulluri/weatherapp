@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Name"
+        android:textColor="#00E5FF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/todayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Date"
+        android:textColor="#B0BEC5"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="HardcodedText" />
+
+    <!-- Weather Icon and Temperature -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_6"
+            app:tint="#00E5FF" />
+
+        <TextView
+            android:id="@+id/todayTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28°C"
+            android:textColor="#FFFFFF"
+            android:textSize="64sp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <!-- 7-Day Forecast -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1E1E1E"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Forecast items will be populated dynamically -->
+        <LinearLayout
+            android:id="@+id/forecastLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Placeholder for dynamic items -->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

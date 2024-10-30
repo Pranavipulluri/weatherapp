@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img_1"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/tvCityName"
+        android:layout_width="162dp"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="560dp"
+        android:text="City Name"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="188dp"
+        android:layout_height="143dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="455dp"
+        android:src="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="180dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="70dp"
+        android:text="19°"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/tvPrecipitation"
+        android:layout_width="195dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/tvTemperature"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:text="Precipitations"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter city name"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="#AAAAAA"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Max and Min Temperature Row -->
+
+    <LinearLayout
+        android:layout_width="203dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="340sp"
+        android:layout_marginEnd="70dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/maxTempText"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:text="Max: 24°"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text=" | "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/minTempText"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="Min: 18°"
+            android:textColor="#14022F"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hourlyForecastBox"
+        android:layout_width="391dp"
+        android:layout_height="228dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/box"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvHourlyForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Today Hourly Forecast"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHourly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnForecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:text="View 7-Day Forecast"
+        android:textColor="@android:color/white"
+        android:background="@drawable/neon_button_background"
+        android:textSize="18sp"/>
+</RelativeLayout>
